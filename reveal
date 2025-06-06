@@ -30,3 +30,6 @@ do
 done
 
 echo "🚀 Done! Check your 'Downloads/Fonts' folder if you selected Option 2 (Copy)".
+
+# Return to previous directory
+cd -
