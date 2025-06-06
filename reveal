@@ -16,17 +16,17 @@ cd ~/Library/Application\ Support/Adobe/CoreSync/plugins/livetype/
 find . -type f -iname "*.otf" | while read file
 do
   # the "Postscript name:" does not contain spaces. good for file names.
-  fontName=`otfinfo --info ${file} | fgrep "PostScript name:" | grep -oE "[^ ]+$"`
+  postscriptName=`otfinfo -p ${file}`
   
   if [ "$isDry" = false ] ; then
     # create a Fonts dir within downloads, if there is none
     mkdir -p ~/Downloads/Fonts/
     # copy files (if no dry-run)
-    cp $file ~/Downloads/Fonts/$fontName.otf
+    cp $file ~/Downloads/Fonts/$postscriptName.otf
   fi
 
   # echo changes:
-  echo "$file\t⮕\t$fontName.otf"
+  echo "$file\t⮕\t$postscriptName.otf"
 done
 
 echo "🚀 DONE! Check your 'Fonts' directory within Downloads if you selected Option 2 (Copy)".
