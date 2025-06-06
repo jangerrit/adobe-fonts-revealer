@@ -4,7 +4,7 @@
 > **Windows?** Check out pawalan’s PowerShell solution here: https://github.com/pawalan/adobe-fonts-liberator
 
 **Problem**  
-Your licensed and activated Adobe Fonts are not accessible. (1) They are stored (hidden) under (macOS): `$HOME/Library/Application\ Support/Adobe/CoreSync/plugins/livetype/.r/`. And (2), the filenames are some sort of id, which is good for Adobe managing the files, yet not human-readable.
+Your licensed and activated Adobe Fonts are not accessible. (1) They are stored (hidden) under (macOS): `$HOME/Library/Application\ Support/Adobe/CoreSync/plugins/livetype/`. And (2), the filenames are some sort of id, which is good for Adobe managing the files, yet not human-readable.
 
 **Solution**  
 This script **copies all activated font files to your Downloads directory** and renames all of them to what they represent.
